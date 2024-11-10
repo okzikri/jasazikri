@@ -1,0 +1,322 @@
+/* Reset dasar untuk margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling Body */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fdf5e6; /* Warna krem lembut */
+    color: #2c2c54;
+    line-height: 1.6;
+}
+
+/* Header dan Navigation */
+header {
+    background: linear-gradient(135deg, #ffcc29, #ff6f61);
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+header img {
+    width: 100%; /* Menggunakan lebar penuh dari header */
+    height: 100%; /* Menggunakan tinggi penuh dari header */
+    object-fit: cover; /* Menjaga proporsi gambar agar tidak terdistorsi */
+}
+/* Garis dekoratif */
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: repeating-linear-gradient(45deg, #ff6f61, #ff6f61 10px, #ffcc29 10px, #ffcc29 20px);
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #ffff00;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #4caf50; /* Hijau vintage */
+}
+
+/* Styling untuk Hero Section (Beranda) */
+.hero {
+    text-align: center;
+    background: linear-gradient(145deg, #7b1fa2, #ffcc29);
+    color: #fff;
+    padding: 80px 20px;
+    font-family: 'Georgia', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: #2c2c54;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px #ff6f61;
+    animation: color-change 5s infinite alternate;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #ffff00;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 3px solid #ffcc29;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+    background-color: #4caf50;
+    color: #fffb91;
+    transform: scale(1.1);
+}
+
+/* Styling untuk Layanan */
+#services {
+    background-color: #fffb91;
+    padding: 50px 20px;
+    margin-top: 80px; /* Menambahkan jarak vertikal di atas bagian layanan */
+    margin-bottom: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+#services h2 {
+    color: #b21f66;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px #2c2c54;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-item {
+    background: #ff6f61;
+    padding: 30px;
+    border: 3px solid #ffcc29;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 28%;
+    border-radius: 15px;
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #ffff00;
+}
+
+.service-item p {
+    font-size: 18px;
+}
+
+/* Styling untuk Portofolio */
+#portfolio {
+    background-color: #fffb91;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #b21f66;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #2c2c54;
+}
+
+/* Styling untuk Kontak */
+#contact {
+    background-color: #7b1fa2;
+    padding: 50px 40px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+    color: #fffb91;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #ffcc29;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 2px solid #b21f66;
+    background-color: #fffb91;
+    color: #2c2c54;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form input:hover,
+form textarea:hover,
+form select:hover {
+    background-color: #ffffe0;
+}
+
+form button {
+    background-color: #ffcc29;
+    color: #7b1fa2;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background-color: #ff6f61;
+    color: #fffb91;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling untuk Footer */
+footer {
+    background: linear-gradient(135deg, #ffcc29, #ff6f61);
+    color: #2c2c54;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    text-shadow: 1px 1px #7b1fa2;
+}
+
+/* Animasi */
+@keyframes color-change {
+    from { color: #ffcc29; }
+    to { color: #ff6f61; }
+}
+/* Styling khusus untuk tabel data */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fffb91; /* Warna sesuai tema */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #b21f66; /* Warna border sesuai tema */
+    text-align: center;
+}
+
+th {
+    background-color: #ff6f61; /* Warna latar sesuai tema */
+    color: #ffff00;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px #2c2c54;
+}
+
+tr:nth-child(even) {
+    background-color: #fdf5e6;
+}
+
+tr:hover {
+    background-color: #ffcc29;
+}
+
+.status-selesai {
+    color: green;
+    font-weight: bold;
+}
+
+.status-proses {
+    color: orange;
+    font-weight: bold;
+}
